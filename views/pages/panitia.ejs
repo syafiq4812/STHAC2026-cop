@@ -121,7 +121,7 @@
     </div>
   </div>
 
-    <!-- ==================== DASHBOARD INTERAKTIF PANEL PANITIA (PROJECT SAIGA) ==================== -->
+  <!-- ==================== DASHBOARD INTERAKTIF PANEL PANITIA (PROJECT SAIGA) ==================== -->
   <div id="admin-dashboard-panel" style="display:none;">
 
     <!-- BARIS 1: TOP ADMIN NAVBAR (1 BARIS SIMETRIS & RAPI) -->
@@ -348,7 +348,6 @@
               <h5 class="font-display fw-bold text-uppercase text-white mb-0"><i class="bi bi-compass text-warning me-2"></i>Langkah Pengelolaan</h5>
               <span class="badge-green-soft">Alur Kerja Standar</span>
             </div>
-            
             <div class="vstack gap-3 small">
               <div class="d-flex align-items-start gap-3">
                 <span class="saiga-step-circle">1</span>
@@ -376,6 +375,7 @@
               </div>
             </div>
           </div>
+        </div>
 
         <div class="col-lg-5">
           <div class="vstack gap-4 h-100">
@@ -2075,25 +2075,18 @@
     const groups = {
       ringkasan: ['ringkasan'],
       peserta: ['pendaftar', 'rider', 'pelatih', 'stable'],
-@@ -2045,29 +2080,38 @@
+      teknis: ['acara', 'lintasan', 'penilaian', 'poin'],
+      sistem: ['panitia', 'unduhan', 'berita'],
       setelan: ['setelan']
     };
 
-
     Object.keys(groups).forEach(gKey => {
       const btn = document.getElementById('adm-group-' + gKey);
-
-
       if (!btn) return;
       const isActive = groups[gKey].includes(tabName);
       btn.classList.remove('btn-gold-pill', 'btn-dark-pill', 'show');
       btn.classList.add(isActive ? 'btn-gold-pill' : 'btn-dark-pill');
       btn.setAttribute('aria-expanded', 'false');
-
-
-
-
-
     });
 
     // 4. Tandai sub-menu yang sedang aktif
